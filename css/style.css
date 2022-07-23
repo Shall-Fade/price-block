@@ -1,0 +1,269 @@
+/* Шрифты */
+/* Полужирный */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat"),
+    url("/fonts/Montserrat-SemiBold.woff") format("woff"),
+    url("/fonts/Montserrat-SemiBold.ttf") format("ttf"),
+    url("/fonts/Montserrat-SemiBold.eot") format("eot");
+}
+/* Жирный */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat"), url("/fonts/Montserrat-Bold.woff") format("woff"),
+    url("/fonts/Montserrat-Bold.ttf") format("ttf"),
+    url("/fonts/Montserrat-Bold.eot") format("eot");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 0 50px;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.tarif-container {
+  font-family: "Montserrat";
+  font-weight: 700;
+  margin: 54px 0;
+  color: #17304a;
+}
+
+/* Tarif Info Block */
+.tarif-info {
+  margin-bottom: 56px;
+  animation: showleft 2s ease;
+}
+
+.tarif-info-img,
+.tarif-info-group {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.tarif-info-group {
+  padding-left: 13px;
+}
+
+.tarif-info-title {
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 55px;
+  padding-bottom: 56px;
+}
+
+.tarif-info-title-span {
+  color: #bd0231;
+}
+
+.tarif-info-description {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 29px;
+  width: 680px;
+}
+
+/* Tarif Price Block */
+.tarif-price {
+  width: 910px;
+  border: 3px solid #bd0231;
+  padding: 56px 100px 0 56px;
+  animation: show 2s ease;
+}
+
+.tarif-price-sum {
+  text-align: center;
+  line-height: 55px;
+  font-size: 90px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.tarif-price-group {
+  text-align: center;
+}
+
+.tarif-price-img,
+.tarif-price-btn {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tarif-price-img {
+  padding-right: 20px;
+}
+
+.tarif-price-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #bd0231;
+  padding: 14px 32px;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  animation: growth 2s ease;
+}
+
+.tarif-price-btn:hover {
+  background-color: rgb(204, 60, 96);
+}
+
+/* Анимация */
+@keyframes showleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes growth {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(1);
+    opacity: 1;
+  }
+}
+
+/* Адаптив */
+@media only screen and (max-width: 1080px) {
+  .tarif-info-description {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .tarif-info-title {
+    font-size: 42px;
+  }
+  .tarif-price {
+    width: 100%;
+  }
+  .tarif-price-sum {
+    font-size: 66px;
+  }
+  .tarif-price-btn {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .tarif-info-description {
+    width: 360px;
+  }
+  .tarif-price {
+    padding: 56px;
+  }
+  .tarif-price-img {
+    display: none;
+  }
+  .tarif-price-sum {
+    padding-bottom: 56px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .tarif-info {
+    margin-bottom: 32px;
+  }
+  .tarif-info-img {
+    display: none;
+  }
+  .tarif-info-title {
+    padding-bottom: 32px;
+  }
+  .tarif-info-description {
+    width: 100%;
+  }
+  .tarif-price {
+    padding: 42px;
+  }
+  .tarif-price-sum {
+    font-size: 42px;
+    padding-bottom: 32px;
+  }
+  .tarif-price-btn {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .tarif-price {
+    padding: 26px;
+  }
+  .tarif-price-sum {
+    font-size: 36px;
+    padding-bottom: 26px;
+  }
+  .tarif-price-btn {
+    padding: 14px 26px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .tarif-info-title {
+    line-height: 1;
+    font-size: 20px;
+    padding-bottom: 32px;
+  }
+  .tarif-info-description {
+    font-size: 16px;
+  }
+  .tarif-price {
+    padding: 20px;
+  }
+  .tarif-price-sum {
+    line-height: 1;
+    font-size: 18px;
+    padding-bottom: 26px;
+  }
+  .tarif-price-btn {
+    padding: 10px 20px;
+    border-radius: 0;
+  }
+}
+@media only screen and (max-width: 260px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+  .tarif-info-title {
+    padding-bottom: 12px;
+  }
+  .tarif-info-description {
+    font-size: 12px;
+  }
+  .tarif-price {
+    border: none;
+    padding: 0;
+  }
+  .tarif-price-sum {
+    font-size: 17px;
+    padding-bottom: 16px;
+  }
+  .tarif-price-btn {
+    padding: 5px 0;
+  }
+}
